@@ -1,0 +1,32 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+    int leftElement(int a[], int n) {
+        // Your code goes here 
+        sort(a,a+n);
+        if(n%2==0)
+        {
+            return a[(n/2)-1];
+        }
+        else
+        {
+            return a[n/2];
+        }
+    }
+};
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+        int a[n], i;
+        for (i = 0; i < n; i++) cin >> a[i];
+        Solution ob;
+        cout << ob.leftElement(a, n) << endl;
+    }
+}
