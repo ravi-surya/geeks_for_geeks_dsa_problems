@@ -1,0 +1,39 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+  public:
+    int areMatricesIdentical(int n, vector<vector<int>> Grid1,
+                             vector<vector<int>> Grid2) {
+        // code here
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                if(Grid1[i][j]!=Grid2[i][j])
+                {
+                    return 0;
+                }
+            }
+        }
+        return 1;
+    }
+};
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int N;
+        cin >> N;
+        vector<vector<int>> Grid1(N, vector<int>(N));
+        for (int i = 0; i < N; i++)
+            for (int j = 0; j < N; j++) cin >> Grid1[i][j];
+        vector<vector<int>> Grid2(N, vector<int>(N));
+        for (int i = 0; i < N; i++)
+            for (int j = 0; j < N; j++) cin >> Grid2[i][j];
+        Solution ob;
+        cout << ob.areMatricesIdentical(N, Grid1, Grid2) << "\n";
+    }
+}
