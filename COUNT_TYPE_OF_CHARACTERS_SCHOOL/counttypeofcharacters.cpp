@@ -49,6 +49,7 @@ int main()
         vector <int> res = ob.count (s);
         for (int i : res)
             cout << i << '\n';
+            
     }
 }
 /*
