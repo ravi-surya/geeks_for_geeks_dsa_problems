@@ -5,7 +5,10 @@ class Solution{
 public:
     string onesComplement(string S,int N){
         //code here
-         for ( char& c : S ) c ^= 1;
+         for ( char& c : S ) 
+         {
+            c ^= 1;
+         }
     return S;
     }
 };
